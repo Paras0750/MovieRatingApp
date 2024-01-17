@@ -15,8 +15,8 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/auth" element={<Auth />} />
+            <Route path="/" element={<Auth />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/rated" element={<Rated />} />
             <Route path="/movie/:id" element={<Movie />} />
             <Route path="/tvshow/:id" element={<Tvshow />} />

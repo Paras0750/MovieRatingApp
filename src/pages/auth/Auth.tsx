@@ -4,9 +4,12 @@ import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
-  const { data, mutate } = useMutation({
+  const { mutate } = useMutation({
     mutationKey: ["login"],
     mutationFn: mutationLogin,
+    onSuccess: (data) => {
+      localStorage.setItem("guest_session_id", data.guest_session_id);
+    },
   });
 
   const navigate = useNavigate();
@@ -15,8 +18,7 @@ const Auth = () => {
     e.preventDefault();
     try {
       await mutate();
-      localStorage.setItem("guest_session_id", data.guest_session_id);
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }

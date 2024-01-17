@@ -31,7 +31,7 @@ export const ColumnDisplay = (props: Props) => {
         {props.data.results.map((item) => {
           const title = props.displayType === DisplayType.Movies ? item.title : item.name;
           return (
-            <Link to={`${props.displayType === DisplayType.Movies ? `/movie/${item.id}` : `/tvshow/>${item.id}`}`} key={item.id}>
+            <Link to={`${props.displayType === DisplayType.Movies ? `/movie/${item.id}` : `/tvshow/${item.id}`}`} key={item.id}>
               <div className="flex flex-col border p-4 rounded-xl hover:scale-110 transition ease-in-out">
                 <img
                   src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
