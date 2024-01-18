@@ -34,11 +34,12 @@ const Tvshow = () => {
                 </div>
                 <span className="font-bold">
                   Genres:
-                  {data.genres.map((item: { id: number; name: string }) => (
-                    <div key={item.id} className="ml-5">
-                      {item.name}
-                    </div>
-                  ))}
+                  {data.genres &&
+                    data.genres.map((item: { id: number; name: string }) => (
+                      <div key={item.id} className="ml-5">
+                        {item.name}
+                      </div>
+                    ))}
                 </span>
                 <span className="font-bold">
                   Number Of Seasons: {data.number_of_seasons}
@@ -49,7 +50,7 @@ const Tvshow = () => {
                 <span>
                   <div className="font-bold mb-4">Producers:</div>
                   <div className="grid grid-cols-3 gap-y-5 justify-self">
-                    {data.production_companies.map(
+                    {data.production_companies && data.production_companies.map(
                       (cont: {
                         id: number;
                         logo_path: string | null;

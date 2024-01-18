@@ -30,7 +30,7 @@ const Home = () => {
     setCurrentPage(page);
     console.log("current page", page);
   };
-
+  console.log("ENV: ", import.meta.env.VITE_TMDB_API_READ_ACCESS_TOKEN);
   return (
     <div className="mt-10 h-auto">
       <div className="text-center">
