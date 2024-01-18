@@ -6,25 +6,22 @@ const options = {
   },
 };
 
-export const fetchMovies = async () => {
+export const fetchMovies = async (page: number) => {
   const res = fetch(
-    "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
+    `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${page}`,
     options
   );
   const data = (await res).json();
-  console.log("Data: ", await data);
+  console.log(`Data: `, await data);
   return data;
 };
 
-
-export const fetchTvShows = async () => {
+export const fetchTvShows = async (page: number) => {
   const res = fetch(
-    "https://api.themoviedb.org/3/tv/popular?language=en-US&page=1",
+    `https://api.themoviedb.org/3/tv/popular?language=en-US&page=${page}`,
     options
   );
   const data = (await res).json();
   console.log("TV Data: ", await data);
   return data;
 };
-
-
