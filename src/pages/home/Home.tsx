@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { ColumnDisplay } from "./columnDisplay.tsx";
+import { ColumnDisplay } from "../../components/columnDisplay.tsx";
 import { fetchMovies, fetchTvShows } from "./query.ts";
 import { useQuery } from "@tanstack/react-query";
 import { Paginate } from "./paginate.tsx";
@@ -12,7 +12,7 @@ export enum DisplayType {
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  
+
   const [displayType, setDisplayType] = useState<DisplayType>(
     DisplayType.Movies
   );

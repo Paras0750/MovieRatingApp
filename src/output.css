@@ -598,20 +598,6 @@ body {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1400px;
-  }
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -669,6 +655,10 @@ body {
   margin-bottom: 1rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -679,6 +669,10 @@ body {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-20 {
@@ -699,14 +693,6 @@ body {
 
 .mt-\[50px\] {
   margin-top: 50px;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .flex {
@@ -753,6 +739,10 @@ body {
   height: 1.2rem;
 }
 
+.h-\[2\.5rem\] {
+  height: 2.5rem;
+}
+
 .h-\[450px\] {
   height: 450px;
 }
@@ -767,14 +757,6 @@ body {
 
 .h-px {
   height: 1px;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[2\.5rem\] {
-  height: 2.5rem;
 }
 
 .max-h-\[150px\] {
@@ -813,32 +795,16 @@ body {
   width: 1.2rem;
 }
 
+.w-\[350px\] {
+  width: 350px;
+}
+
 .w-\[50px\] {
   width: 50px;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[2rem\] {
-  width: 2rem;
-}
-
-.w-\[450px\] {
-  width: 450px;
-}
-
-.w-\[300px\] {
-  width: 300px;
-}
-
-.w-\[350px\] {
-  width: 350px;
 }
 
 .min-w-\[8rem\] {
@@ -976,14 +942,6 @@ body {
   border-width: 1px;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
-.border-r-0 {
-  border-right-width: 0px;
-}
-
 .border-l-0 {
   border-left-width: 0px;
 }
@@ -992,13 +950,13 @@ body {
   border-style: solid;
 }
 
-.border-input {
-  border-color: hsl(var(--input));
-}
-
 .border-gray-500 {
   --tw-border-opacity: 1;
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
+.border-input {
+  border-color: hsl(var(--input));
 }
 
 .bg-background {
@@ -1048,20 +1006,20 @@ body {
   padding: 0.25rem;
 }
 
-.p-20 {
-  padding: 5rem;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
 
+.p-20 {
+  padding: 5rem;
+}
+
 .p-3 {
   padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .px-2 {
@@ -1271,12 +1229,6 @@ body {
 
 .ease-in-out {
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover\:scale-110:hover {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:scale-105:hover {

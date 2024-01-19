@@ -19,7 +19,7 @@ export const rateMovie = async (movieId: number, rating: number) => {
 
 export const rateTvShow = async (rateTvShowId: number, rating: number) => {
   const res = fetch(
-    `https://api.themoviedb.org/3/movie/${rateTvShowId}/rating?guest_session_id=${localStorage.getItem(
+    `https://api.themoviedb.org/3/tv/${rateTvShowId}/rating?guest_session_id=${localStorage.getItem(
       "guest_session_id"
     )}&api_key=${import.meta.env.VITE_TMDB_API_KEY}`,
     {
