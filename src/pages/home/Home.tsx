@@ -12,7 +12,7 @@ export enum DisplayType {
 
 const Home = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-
+  
   const [displayType, setDisplayType] = useState<DisplayType>(
     DisplayType.Movies
   );
@@ -30,8 +30,7 @@ const Home = () => {
     setCurrentPage(page);
     console.log("current page", page);
   };
-  console.log("ENV Token: ", import.meta.env.VITE_TMDB_API_READ_ACCESS_TOKEN);
-  console.log("ENV Key: ", import.meta.env.VITE_TMDB_API_KEY);
+
   return (
     <div className="mt-10 h-auto">
       <div className="text-center">

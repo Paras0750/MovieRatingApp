@@ -1,7 +1,7 @@
 import { DisplayType } from "./Home";
-import { Link } from "react-router-dom";
+import { Card } from "./card";
 
-interface DisplayData {
+export interface DisplayData {
   id: number;
   overview: string;
   poster_path: string;
@@ -26,35 +26,16 @@ export const ColumnDisplay = (props: Props) => {
     <>
       <div className="grid md:grid-cols-3 gap-x-5 gap-y-10">
         {props.data &&
-          props.data.results.map((item) => {
+          props.data.results.map((item, i) => {
             const title =
               props.displayType === DisplayType.Movies ? item.title : item.name;
             return (
-              <Link
-                to={`${
-                  props.displayType === DisplayType.Movies
-                    ? `/movie/${item.id}`
-                    : `/tvshow/${item.id}`
-                }`}
-                key={item.id}
-              >
-                <div className="flex flex-col border p-4 rounded-xl hover:scale-110 transition ease-in-out">
-                  <img
-                    src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
-                    className="h-[450px]"
-                  />
-                  <div className="font-bold text-center text-2xl py-5">
-                    {title}
-                  </div>
-                  <div className="max-h-[150px] overflow-auto">
-                    <strong>Overview: </strong> {item.overview}
-                  </div>
-                  <div className="pt-6">
-                    <strong>Vote Avarage: </strong> {item.vote_average}
-                  </div>
-                  <div>{item.relase_date}</div>
-                </div>
-              </Link>
+              <Card
+                key={i}
+                displayType={props.displayType}
+                title={title}
+                item={item}
+              />
             );
           })}
       </div>
