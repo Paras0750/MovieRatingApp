@@ -651,6 +651,16 @@ body {
   margin-bottom: 1rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -759,12 +769,36 @@ body {
   height: 1px;
 }
 
+.h-full {
+  height: 100%;
+}
+
+.h-\[600px\] {
+  height: 600px;
+}
+
 .max-h-\[150px\] {
   max-height: 150px;
 }
 
 .min-h-\[80vh\] {
   min-height: 80vh;
+}
+
+.min-h-\[520px\] {
+  min-height: 520px;
+}
+
+.min-h-\[500px\] {
+  min-height: 500px;
+}
+
+.min-h-\[\] {
+  min-height: ;
+}
+
+.min-h-\[800px\] {
+  min-height: 800px;
 }
 
 .w-10 {
@@ -1154,6 +1188,11 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .underline-offset-4 {

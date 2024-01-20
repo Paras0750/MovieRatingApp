@@ -2,12 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { DisplayType } from "./Home";
-import { DisplayData } from "../../components/columnDisplay";
+
 import { useMutation } from "@tanstack/react-query";
 import { rateMovie, rateTvShow } from "./mutation";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Card from "@/components/card";
+import { DisplayData } from "@/components/columnDisplay";
 
 interface Props {
   displayType: DisplayType;
@@ -15,7 +16,7 @@ interface Props {
   title?: string;
 }
 
-export const CardComponent = ({ displayType, item, title }: Props) => {
+export const CardComponent = ({ displayType, item }: Props) => {
   const [rating, setRating] = useState<number>(1);
 
   const { mutate: rateMovieMut } = useMutation({

@@ -9,6 +9,7 @@ export interface DisplayData {
   name?: string;
   vote_average: number;
   relase_date: string;
+  rating?: number;
 }
 
 interface Props {
