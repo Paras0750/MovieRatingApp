@@ -12,7 +12,6 @@ export const fetchMovies = async (page: number) => {
     options
   );
   const data = (await res).json();
-  console.log(`Data: `, await data);
   return data;
 };
 
@@ -22,6 +21,5 @@ export const fetchTvShows = async (page: number) => {
     options
   );
   const data = (await res).json();
-  console.log("TV Data: ", await data);
   return data;
 };

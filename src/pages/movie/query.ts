@@ -12,6 +12,5 @@ export const fetchMovieDetails = async (movieId: string) => {
     options
   );
   const data = (await res).json();
-  console.log("Data2: ", await data);
   return data;
 };

@@ -19,8 +19,8 @@ const Auth = () => {
     try {
       await mutate();
       navigate("/home");
-    } catch (error) {
-      console.log(error);
+    } catch (error: Error | unknown) {
+      throw new Error(error as string);
     }
   };
 

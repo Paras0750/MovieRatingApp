@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+Sitemap: https://movie-app-0750.vercel.app/sitemap.xml

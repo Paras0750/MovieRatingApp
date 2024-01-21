@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-import Home from "./pages/home/Home";
 import { ThemeProvider } from "./components/theme-provider";
-import Auth from "./pages/auth/Auth";
-import Rated from "./pages/rated/Rated";
-import Movie from "./pages/movie/Movie";
-import Tvshow from "./pages/tvshow/Tvshow";
+import { lazy } from "react";
+const Home = lazy(() => import("./pages/home/Home"));
+const Auth = lazy(() => import("./pages/auth/Auth"));
+const Rated = lazy(() => import("./pages/rated/Rated"));
+const Movie = lazy(() => import("./pages/movie/Movie"));
+const Tvshow = lazy(() => import("./pages/tvshow/Tvshow"));
 
 function App() {
   return (

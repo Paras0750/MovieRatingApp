@@ -28,7 +28,6 @@ const Home = () => {
 
   const pageChange = (page: number) => {
     setCurrentPage(page);
-    console.log("current page", page);
   };
 
   return (

@@ -12,7 +12,6 @@ export const fetchRatedMovies = async () => {
     options
   );
   const data = (await res).json();
-  console.log("DataMovie: ", await data);
   return data;
 };
 
@@ -26,6 +25,5 @@ export const fetchRatedTvShow = async () => {
     options
   );
   const data = (await res).json();
-  console.log("Data TV: ", await data);
   return data;
 };

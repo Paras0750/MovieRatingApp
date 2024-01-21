@@ -34,7 +34,6 @@ export const CardComponent = ({ displayType, item }: Props) => {
   });
 
   const handleRating = () => {
-    console.log("rating", rating);
     if (displayType === DisplayType.Movies) {
       rateMovieMut(item.id);
     } else {
